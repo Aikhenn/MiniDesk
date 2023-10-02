@@ -1,0 +1,646 @@
+@import url('https://fonts.cdnfonts.com/css/lazy-dog');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+    scroll-behavior: none;
+}
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+.container{
+    max-width: 100%;
+    height: 100vh;
+    background: #eed1b2;
+    overflow: hidden;
+    background-image: url(images/bg4.png);
+
+    align-items: center;
+    justify-content: space-between;
+    animation: change 10s infinite ease-in-out;
+  
+}
+
+@keyframes  change {
+    0%
+    {
+        background-image: url(images/bg3.png);
+    }
+    50%
+    {
+        background-image: url(images/bg4.png);
+    }
+    100%
+    {
+        background-image: url(images/bg3.png);
+    }
+    
+    
+}
+
+h1{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lazy Dog', sans-serif;
+    font-size: 80px;
+    font-weight: 10;
+    top: 80px;
+    padding-top: 40px;
+}
+
+p{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lazy Dog', sans-serif;    
+    font-size: 20px   ;
+    top: 10%;
+    text-align: center;
+}
+
+h6{         
+    position: absolute;
+    padding: 2px;
+    padding-left: 7px;
+    bottom: 5px;
+}
+
+.imageCon{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15%;
+}
+
+.imageCon img{
+    width: 12%;
+}
+
+.imageCon img:hover{
+
+    opacity: 40%;
+    cursor: pointer;
+
+}
+
+.imageCon .clockimg{
+position: relative;
+
+}
+
+.imageCon .calculatorimg{
+    position: relative;
+
+ }
+
+.imageCon .tictacimg{
+    position: relative;
+ }
+
+ 
+.imageCon .Notesimg{
+    position: relative;
+ }
+ 
+.imageCon .Todoimg{
+    position: relative;
+ }
+
+.bg{
+    position: absolute;
+    width: 50%;
+    top: 50px;
+    left: 450px;
+   
+}
+
+
+.calculator{
+    position: absolute;
+    background: #ffffff;
+    top: 20%;
+    left: 40%;
+    width: 374px;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transform: scale(1);
+}
+
+.calculator .drag{
+    position: relative;
+    top: -20px;
+    left: -20px;
+    background-color: #fda760;
+    width: 374px;
+    height: 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.calculator .drag:hover{
+    background-color: #c07b43;
+}
+
+.Inactive{
+
+    transform: scale(0);
+    transition: .4s ease;
+}
+
+.closeCal{
+  
+    position: relative;
+    left: 280px;    
+    top: 20px;
+    width: 50px;
+    height: 40px;
+    
+}
+
+.closeCal:hover{
+
+    background-color: #fda760;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+a{
+    text-decoration: none;
+    color: rgb(18, 17, 17);
+ 
+}
+
+.calculator form input{
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255,255,255,0.1), 5px 5px 15px rgba(0,0,0,0.2) ;
+    background: transparent;
+    font-size: 20px;
+    color: rgb(13, 12, 12);
+    cursor: pointer;
+    margin: 10px;
+}
+
+.calculator form input:hover{
+    background-color: #ffd9b0;
+}
+
+form .display{
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+form .display input{
+    text-align: right;
+    font-size: 30px;
+    flex: 1;
+    box-shadow: none;
+}
+
+form input.equal{
+    width: 145px;
+}
+
+form input.operator{
+    color: #db6300;
+}
+
+a.button{
+    color: #262d36;
+}
+
+input.TxtInput{
+    height: 100px;
+}
+
+/*To do Lists*/
+.ToDo{
+    background-color: white;
+    position: absolute;
+    left: 36%;
+    top: 30%;
+    width: 100%;
+    max-width: 540px;
+    height: 500px;
+    margin-left: 10px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    transform: scale(1);
+   
+}   
+
+.ToDo .drag{
+    position: relative;
+    top: -40px;
+    left: -30px;
+    background-color: #fda760;
+    width: 540px;
+    height: 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.ToDo .drag:hover{
+    background-color: #c07b43;
+}
+
+.Inactive{
+
+    transform: scale(0);
+    transition: .4s ease;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.close{
+  
+    position: relative;
+    left: 140px;    
+    width: 50px;
+    height: 40px;
+    
+}
+
+.close:hover{
+
+    background-color: #fda760;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+.ToDo input{
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px;
+
+}
+
+.ToDo button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #fda760;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+
+
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer; 
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/checked.png);
+    
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover{
+    background: #edeef0;
+}
+
+/*Tictactoe*/
+
+.gameContainer{
+    position: absolute;
+    left: 43%;
+    top: 57%;
+    margin: 20px;
+    font-family: "Permanent Marker", cursive;
+    text-align: center;
+    transform: scale(1);
+}
+
+.gameContainer .drag{
+    position: absolute;
+    top: 10px;
+    left: -2.4px;
+    background-color: transparent;
+    width: 230px;
+    height: 50px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.gameContainer .drag:hover{
+    cursor: pointer;
+}
+
+
+.gameContainer .h2:hover{
+    color: #242527;
+}
+
+.gameContainer #restartBtn{
+   
+    background: none;
+    padding: 5px 20px;
+    font-size: 15px;
+}
+
+.gameContainer #restartBtn:hover{
+    background-color: rgb(238, 238, 238);
+}
+
+
+.Inactive{
+
+    transform: scale(0);
+    transition: .4s ease;
+}
+
+.closeT{
+  
+    position: relative;
+    left: 22px;    
+    top: 0px;
+    width: 50px;
+    height: 40px;
+    
+}
+
+.closeT:hover{
+
+    background-color: #fda760;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+.cell{
+    width: 75px;
+    height: 75px;
+    border: 2px solid;
+    box-shadow: 0 0 0 2px;
+    line-height: 75px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#statusText{
+    margin-top: 10px;
+}
+
+
+
+#cellContainer{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 225px;
+    margin: auto;
+}
+
+/*DigitalClock*/
+
+.DigitalClock{
+    position: absolute;
+    width: 800px;
+    height: 180px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: scale(1);
+    cursor:default;
+
+}
+
+.DigitalClock .drag{
+    position: absolute;
+    background-color: transparent;
+    width: 93%;
+    height: 25%;
+    border-radius: 10px 10px 0px 0px;
+    z-index: 2;
+}
+
+
+
+.Inactive{
+    transform: scale(0);
+}
+
+
+.closeC{
+  
+    position: relative;
+    left: 640px;    
+    top: -55px;
+    width: 50px;
+    height: 40px;
+    
+}
+
+.closeC:hover{
+
+    background-color: #fda760;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+.Clock{
+    width: 100%;    
+    height: 100%;
+    background: transparent;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(40px);
+    border: 2px solid black;
+}
+
+
+.Clock span{
+    font-size: 80px;
+    width: 110px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+.Clock span::after{
+
+    font-size: 16px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+  
+     
+}
+
+#hrs::after{
+    content: 'HOURS';
+}   
+
+#min::after{
+    content: 'MIN';
+}
+
+#sec::after{
+    content: 'SEC';
+}
+
+/*Notes*/
+
+.Notes{
+    background-color: rgb(229, 229, 228);
+    position: absolute;
+    left: 43%;
+    top: 40%;
+    border-bottom-right-radius: 10px;
+    height: 240px;
+    margin-left: 10px;
+    display: block;
+  
+  
+}   
+.Notes .drag{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: #fda760;
+    height: 20px;
+  
+}
+
+.Notes .drag:hover{
+    background-color: #c07b43;
+}
+
+
+.Inactive{
+
+    transform: scale(0);
+    transition: .4s ease;
+}
+
+.closeN{
+  
+    position: relative;
+    left: 65px;    
+    top: -3px;
+    width: 30px;
+    height: 40px;
+    
+}
+
+.closeN:hover{
+
+    background-color: #fda760;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+h3{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid black ;
+   
+  
+}
+
+.NotesTxt{
+    background-color: rgb(229, 228, 228);
+    margin: 12px;
+    padding-top: 10px;
+    height: 60%; 
+    border: none;
+}
+
+.NotesTxt:focus {
+    
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+  }
+
+
+/*Btn positions*/
+.BtnCon{
+
+    display: flex;
+    top: 50%;
+    left: 20%;
+}
+
+.BtnCon .Btn{
+    font-size: 20px;
+    background: none;
+    padding: 30px;
+    margin: 10px;
+}
+
+.BtnCon .Btn:hover{
+    background-color: #d8b37b;
+
+}

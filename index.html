@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="move('drag')">
+    
+    <div class="container">
+        <h1>Mini-Desk!</h1>
+        <p>Welcome to Mini-Desk! your digital sanctuary  <br>
+            and your virtual workspace designed to amplify  <br>
+            efficiency and organization! helps with   <br>
+            boredom and scattered thoughts! </p>
+        <div class="imageCon">
+            
+            <img src="images/Clock.png" alt="" class="clockimg" id="ClockBtn">
+            <img src="images/Calculator.png" alt="" class="calculatorimg" id="CalcBtn">
+            <img src="images/TicTacToe.png" alt="" class="tictacimg" id="TicTacBtn">
+            <img src="images/Notes.png" alt="" class="Notesimg" id="NotesBtn">
+            <img src="images/Todo.png" alt="" class="Todoimg" id="ToDoBtn">
+        </div>
+        <!-- <div class="BtnCon">
+            <button class="Btn" id="CalcBtn">calc</button>
+            <button class="Btn" id ="ToDoBtn">to-do</button>
+            <button class="Btn" id="TicTacBtn">TicTacToe</button>
+            <button class="Btn" id="ClockBtn">Clock</button>
+            <button class="Btn" id="NotesBtn">Notes</button>
+        </div> -->
+      
+      <div class ="calculator Inactive " id="calculator">
+            <div class="drag"></div>
+            <form >
+                <ion-icon name="close-circle-outline" class="closeCal" id="closeCal"></ion-icon>
+                <div class="display">
+                    <input type="text" name="display" id="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="display.value = '' " class="operator">
+                    <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1) "class="operator">
+                    <input type="button" value="." onclick="display.value += '.' " class="operator">
+                    <input type="button" value="/" onclick="display.value += '/' " class="operator">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="display.value += '7' ">
+                    <input type="button" value="8" onclick="display.value += '8' ">
+                    <input type="button" value="9" onclick="display.value += '9' ">
+                    <input type="button" value="*" onclick="display.value += '*' " class="operator">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="display.value += '4' ">
+                    <input type="button" value="5" onclick="display.value += '5' ">
+                    <input type="button" value="6" onclick="display.value += '6' ">
+                    <input type="button" value="-" onclick="display.value += '-' " class="operator">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="display.value += '1' ">
+                    <input type="button" value="2" onclick="display.value += '2' ">
+                    <input type="button" value="3" onclick="display.value += '3' ">
+                    <input type="button" value="+" onclick="display.value += '+' " class="operator">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="display.value += '00' ">
+                    <input type="button" value="0" onclick="display.value += '0' ">
+                    <input type="button" value="=" onclick="display.value = calc(display.value)" class ="equal operator">
+                  
+                    
+                </div>
+                
+                
+            </form>
+        </div> 
+
+        <div class="ToDo Inactive" id="ToDo">
+            <div class="drag"></div>
+             <h2>To-Do List<ion-icon name="close-circle-outline" class="close" id="close"onclick="close()"></ion-icon> </h2>
+             
+             
+             <div class="row">
+                <input type="text" id="input-box" placeholder="add your text here">
+                <button onclick="addTask()">Add </button>
+             </div>
+             <ul id="list-container">
+                <!-- <li class="checked">Task 1</li>
+                <li class="checked">Task 2</li>
+                <li class="checked">Task 3</li>
+                <li class="checked">Task 4</li> -->
+
+             </ul>
+            
+        </div>
+       <div class="gameContainer Inactive" id="TicTacToe">
+             <div class="drag"></div>
+            <h2>Tic Tac Toe  <ion-icon name="close-circle-outline" class="closeT" id="closeT"></ion-icon></h2>
+            <div id="cellContainer">
+                <div cellIndex="0" class="cell"></div>
+                <div cellIndex="1" class="cell"></div>
+                <div cellIndex="2" class="cell"></div>
+                <div cellIndex="3" class="cell"></div>
+                <div cellIndex="4" class="cell"></div>
+                <div cellIndex="5" class="cell"></div>
+                <div cellIndex="6" class="cell"></div>
+                <div cellIndex="7" class="cell"></div>
+                <div cellIndex="8" class="cell"></div>
+            </div>
+            <h2 id="statusText">test</h2>
+            <button id="restartBtn">restart</button>
+        </div> 
+        
+       <div class="DigitalClock Inactive " id="Clock">
+            <div class="drag"></div>
+            <div class="Clock">
+                <ion-icon name="close-circle-outline" class="closeC" id="closeC"></ion-icon> 
+                <span id="hrs">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+            </div>
+       </div>
+
+       <div class="Notes Inactive" id="Notes">
+            <div class="drag"></div>
+            <h3>Notes   <ion-icon name="close-circle-outline" class="closeN" id="closeN"></ion-icon> </h3>
+            <textarea name="" id="" cols="30" rows="10" placeholder="add text here..." class="NotesTxt"></textarea>
+       </div>
+
+
+    <h6>INF212 Patiño, Guzman, Viena, Cantillon</h6>
+    </div>
+
+
+    
+   
+<script src="script.js"></script> 
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+</body>
+</html>
