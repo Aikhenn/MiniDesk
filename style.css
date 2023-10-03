@@ -240,7 +240,7 @@ input.TxtInput{
     padding: 40px 30px 70px;
     border-radius: 10px;
     transform: scale(1);
-   
+    overflow: hidden;
 }   
 
 .ToDo .drag{
